@@ -1,0 +1,25 @@
+<h2>Product-List</h2>
+<table class="table table-striped">
+
+<tr>
+    <th>ProductName</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Actions</th>
+</tr>
+
+    <tr *ngFor = "let product of products">
+    <td>{{product.productname}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.status}}</td>
+    <td>
+        <button (click) = "updateProduct(product.id)" class = "btn btn-info">Update</button>
+        <button (click) = "deleteProducts(product.id)" class = "btn btn-danger" style="margin-top: 10px">Delete</button>
+    </td>
+
+</tr>
+
+
+</table>
